@@ -10,13 +10,20 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.priyanshub.boruteapp.navigation.SetupNavGraph
 import com.priyanshub.boruteapp.ui.theme.BoruteAppTheme
 
 class MainActivity : ComponentActivity() {
+
+    private lateinit var navHostController: NavHostController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             BoruteAppTheme {
+                navHostController = rememberNavController()
+                SetupNavGraph(navHostController = navHostController)
 
             }
         }
