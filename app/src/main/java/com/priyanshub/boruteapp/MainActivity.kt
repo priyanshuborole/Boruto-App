@@ -14,7 +14,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.priyanshub.boruteapp.navigation.SetupNavGraph
 import com.priyanshub.boruteapp.ui.theme.BoruteAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private lateinit var navHostController: NavHostController
