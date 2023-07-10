@@ -1,4 +1,4 @@
-package com.priyanshub.boruteapp.presentation.welcome
+package com.priyanshub.boruteapp.presentation.screens.welcome
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -27,10 +27,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.priyanshub.boruteapp.R
 import com.priyanshub.boruteapp.domain.model.OnboardingPage
+import com.priyanshub.boruteapp.navigation.Screen
 import com.priyanshub.boruteapp.ui.theme.EXTRA_LARGE_PADDING
 import com.priyanshub.boruteapp.ui.theme.PAGING_INDICATOR_SPACING
 import com.priyanshub.boruteapp.ui.theme.PAGING_INDICATOR_WIDTH
@@ -43,11 +45,15 @@ import com.priyanshub.boruteapp.ui.theme.titleColor
 import com.priyanshub.boruteapp.ui.theme.welcomeScreenBackgroundColor
 import com.priyanshub.boruteapp.utils.Constants.LAST_ON_BOARDING_PAGE
 import com.priyanshub.boruteapp.utils.Constants.ON_BOARDING_PAGE_COUNT
+import dagger.hilt.android.lifecycle.HiltViewModel
 
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun WelcomeScreen(navController: NavHostController){
+fun WelcomeScreen(
+    navController: NavHostController,
+    welcomeViewModel: WelcomeViewModel = hiltViewModel()
+){
 
     val pages = listOf(
         OnboardingPage.First,
@@ -83,7 +89,9 @@ fun WelcomeScreen(navController: NavHostController){
             pageCount = ON_BOARDING_PAGE_COUNT)
 
         FinishButton(modifier = Modifier.weight(1f), pagerState = pagerState) {
-
+            navController.popBackStack()
+            navController.navigate(Screen.Home.route)
+            welcomeViewModel.saveOnboardingState(true)
         }
     }
     

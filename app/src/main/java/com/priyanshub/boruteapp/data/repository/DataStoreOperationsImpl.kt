@@ -1,4 +1,4 @@
-package com.priyanshub.boruteapp.data.prefs
+package com.priyanshub.boruteapp.data.repository
 
 import android.content.Context
 import androidx.datastore.core.DataStore
