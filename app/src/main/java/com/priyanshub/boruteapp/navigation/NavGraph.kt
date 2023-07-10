@@ -6,6 +6,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.priyanshub.boruteapp.presentation.welcome.WelcomeScreen
 import com.priyanshub.boruteapp.utils.Constants.DETAILS_ARGUMENT_KEY
 
 
@@ -13,13 +14,13 @@ import com.priyanshub.boruteapp.utils.Constants.DETAILS_ARGUMENT_KEY
 fun SetupNavGraph(navHostController: NavHostController) {
     NavHost(
         navController = navHostController,
-        startDestination = Screen.Splash.route
+        startDestination = Screen.Welcome.route
     ) {
-        composable(route = Screen.Splash.route){
-
-        }
+//        composable(route = Screen.Splash.route){
+//
+//        }
         composable(route = Screen.Welcome.route){
-
+            WelcomeScreen(navController = navHostController)
         }
         composable(route = Screen.Home.route){
 

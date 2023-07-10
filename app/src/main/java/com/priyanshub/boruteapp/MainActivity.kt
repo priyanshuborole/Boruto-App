@@ -28,7 +28,6 @@ class MainActivity : ComponentActivity() {
             BoruteAppTheme {
                 navHostController = rememberNavController()
                 SetupNavGraph(navHostController = navHostController)
-
             }
         }
     }
