@@ -41,6 +41,7 @@ import com.priyanshub.boruteapp.ui.theme.descriptionColor
 import com.priyanshub.boruteapp.ui.theme.inactiveIndicatorColor
 import com.priyanshub.boruteapp.ui.theme.titleColor
 import com.priyanshub.boruteapp.ui.theme.welcomeScreenBackgroundColor
+import com.priyanshub.boruteapp.utils.Constants.LAST_ON_BOARDING_PAGE
 import com.priyanshub.boruteapp.utils.Constants.ON_BOARDING_PAGE_COUNT
 
 
@@ -138,7 +139,7 @@ fun FinishButton(modifier: Modifier,pagerState: PagerState, onClick: () -> Unit)
     ) {
         AnimatedVisibility(
             modifier = modifier.fillMaxWidth(),
-            visible = pagerState.currentPage == 2
+            visible = pagerState.currentPage == LAST_ON_BOARDING_PAGE
         ) {
             Button(
                 colors = ButtonDefaults.buttonColors(
