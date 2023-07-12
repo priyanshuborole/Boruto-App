@@ -1,6 +1,7 @@
 package com.priyanshub.boruteapp.ui.theme
 
 import androidx.compose.material.Colors
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val Purple200 = Color(0xFFBB86FC)
@@ -29,3 +30,7 @@ val Colors.inactiveIndicatorColor
 
 val Colors.buttonBackgroundColor
     get() = if (isLight) Purple500 else Purple700
+val Colors.topAppBarContentColor
+    get() = if (isLight) Color.White else LightGray
+val Colors.topAppBarBackgroundColor
+    get() = if (isLight) Purple500 else Color.Black

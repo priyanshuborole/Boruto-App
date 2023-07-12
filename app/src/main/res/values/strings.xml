@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Borute App</string>
     <string name="onboarding_page">onBoarding Page</string>
+    <string name="search_icon">search icon</string>
 </resources>
