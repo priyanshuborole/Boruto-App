@@ -12,4 +12,6 @@ object Constants {
 
     const val PREFERENCE_NAME = "boruto_preference"
     const val PREFERENCE_KEY = "onboarding_completed"
+
+    const val BASE_URL = "https://borutoapp-backend-production.up.railway.app/"
 }
