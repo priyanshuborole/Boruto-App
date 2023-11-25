@@ -10,12 +10,12 @@
               <deviceKey>
                 <Key>
                   <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\priyanshu borole\.android\avd\Oreo_27.avd" />
+                  <value value="C:\Users\priyanshu borole\.android\avd\Nougat_7.1.1.avd" />
                 </Key>
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2023-07-10T14:53:35.392305200Z" />
+          <timeTargetWasSelectedWithDropDown value="2023-11-25T11:41:22.183957200Z" />
         </State>
       </entry>
     </value>

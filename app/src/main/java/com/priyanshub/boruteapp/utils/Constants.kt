@@ -14,4 +14,6 @@ object Constants {
     const val PREFERENCE_KEY = "onboarding_completed"
 
     const val BASE_URL = "https://borutoapp-backend-production.up.railway.app/"
+
+    const val ITEMS_PER_PAGE = 3
 }
