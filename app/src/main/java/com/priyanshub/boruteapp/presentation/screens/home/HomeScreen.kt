@@ -1,11 +1,15 @@
 package com.priyanshub.boruteapp.presentation.screens.home
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.priyanshub.boruteapp.presentation.components.RatingWidget
+import com.priyanshub.boruteapp.ui.theme.LARGE_PADDING
 
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -19,5 +23,6 @@ fun HomeScreen(
         topBar = {
             HomeTopBar(onSearchClicked = {})
         }
-    ){}
+    ){
+    }
 }
