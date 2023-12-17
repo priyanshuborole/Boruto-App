@@ -7,7 +7,9 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.priyanshub.boruteapp.presentation.common.ListContent
 import com.priyanshub.boruteapp.presentation.components.RatingWidget
 import com.priyanshub.boruteapp.ui.theme.LARGE_PADDING
 
@@ -15,6 +17,7 @@ import com.priyanshub.boruteapp.ui.theme.LARGE_PADDING
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun HomeScreen(
+    navHostController: NavHostController,
     homeViewModel: HomeViewModel = hiltViewModel()
 ){
 
@@ -22,7 +25,9 @@ fun HomeScreen(
     Scaffold(
         topBar = {
             HomeTopBar(onSearchClicked = {})
+        },
+        content = {
+            ListContent(allHeroes,navHostController)
         }
-    ){
-    }
+    )
 }
